@@ -5,7 +5,7 @@ import "./Vendorhome.css";
 import Home from "../Home/Home";
 import Userhome from "../User/Userhome";
 import { useNavigate } from "react-router-dom";
-import swal from 'swal';
+import swal from 'sweetalert';
 
 function VendorHome() {
 

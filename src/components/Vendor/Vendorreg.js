@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Home from "../Home/Home";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import swal from 'swal';
+import swal from 'sweetalert';
 
 function Vendorreg() {
   const navigate = useNavigate();

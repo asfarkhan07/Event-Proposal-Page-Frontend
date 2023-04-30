@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Home from '../Home/Home'
 import { useNavigate } from "react-router-dom";
-import swal from 'swal';
+import swal from 'sweetalert';
 
 function Userhome() {
 
