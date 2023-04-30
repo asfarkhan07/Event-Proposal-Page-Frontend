@@ -5,6 +5,7 @@ import "./Vendorhome.css";
 import Home from "../Home/Home";
 import Userhome from "../User/Userhome";
 import { useNavigate } from "react-router-dom";
+import swal from 'swal';
 
 function VendorHome() {
 
@@ -48,7 +49,14 @@ function VendorHome() {
      localStorage.setItem('vendorName', data.vendorName);
      if (data.status == "ok")
      {
-      alert("login Successful")
+      // alert("login Successful")
+      swal({
+        position: 'top',
+        icon: 'success',
+        title: 'Login successfull',
+        showConfirmButton: false,
+        timer: 2000
+      })
       navigate("/VendorProposal")
      }if (data.status === "error"){
       alert(`${data.error}`)

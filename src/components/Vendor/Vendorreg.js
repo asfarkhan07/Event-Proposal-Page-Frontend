@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Home from "../Home/Home";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import swal from 'swal';
 
 function Vendorreg() {
   const navigate = useNavigate();
@@ -45,7 +46,14 @@ function Vendorreg() {
     .then((data)=>{
       if (data.status == "ok")
       {
-       alert("registration Successful")
+      //  alert("registration Successful")
+      swal({
+        position: 'top',
+        icon: 'success',
+        title: 'Registration successful',
+        showConfirmButton: false,
+        timer: 2000
+      })
        navigate("/")
       }
       if (data.status == "error"){

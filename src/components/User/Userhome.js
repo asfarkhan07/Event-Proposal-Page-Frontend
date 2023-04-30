@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Home from '../Home/Home'
 import { useNavigate } from "react-router-dom";
+import swal from 'swal';
 
 function Userhome() {
 
@@ -39,7 +40,14 @@ function Userhome() {
      localStorage.setItem('userName', data.userName);
      if (data.status == "ok")
      {
-      alert("login Successful")
+      // alert("login Successful")
+      swal({
+        position: 'top',
+        icon: 'success',
+        title: 'Login successfull',
+        showConfirmButton: false,
+        timer: 2000
+      })
       navigate('/Userproposals')
      }if (data.status == "error"){
       alert(`${data.error}`)

@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Home from '../Home/Home'
 import { useNavigate } from "react-router-dom";
+import swal from 'swal';
 
 
 function Userreg() {
@@ -46,7 +47,14 @@ function Userreg() {
     .then((data)=>{
       if (data.status === "ok")
       {
-       alert("registration Successful")
+      //  alert("registration Successful")
+      swal({
+        position: 'top',
+        icon: 'success',
+        title: 'Registration successful',
+        showConfirmButton: false,
+        timer: 2000
+      })
        navigate("/User")
       }
       if (data.status === "error"){
